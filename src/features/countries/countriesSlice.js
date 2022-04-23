@@ -20,6 +20,7 @@ const initialState = {
     status: 'idle',
     error: null,
     countryChosen: '',
+    region: '',
 };
 
 export const countriesSlice = createSlice({
@@ -28,6 +29,9 @@ export const countriesSlice = createSlice({
     reducers: {
         selectCountry: (state, action) => {
             state.countryChosen = action.payload;
+        },
+        selectRegion: (state, action) => {
+            state.region = action.payload;
         },
     },
     extraReducers: (builder) => {
@@ -46,8 +50,9 @@ export const countriesSlice = createSlice({
     },
 });
 
-export const { selectCountry } = countriesSlice.actions;
+export const { selectCountry, selectRegion } = countriesSlice.actions;
 
 export const getAllCountries = (state) => state.countries.payload;
+export const getRegion = (state) => state.countries.region;
 
 export default countriesSlice.reducer;

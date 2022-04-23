@@ -12,7 +12,7 @@ export default createGlobalStyle`
         background-color: ${({ theme }) => theme.background.primary}
     }
 
-    button {
+    button, input {
         outline: none;
         border: none;
         background: none;
