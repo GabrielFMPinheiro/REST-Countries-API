@@ -7,6 +7,10 @@ import App from './App';
 
 import store from './app/store';
 
+import { fetchCountries } from './features/api/countriesSlice';
+
+store.dispatch(fetchCountries());
+
 ReactDOM.render(
     <Router>
         <Provider store={store}>
