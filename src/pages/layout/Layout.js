@@ -7,8 +7,10 @@ import GlobalStyle from '../../styles/global';
 
 import { dark, light } from '../../styles/theme';
 
+import { getActualTheme } from '../../features/theme/themeSlice';
+
 function Layout() {
-    const theme = useSelector((state) => state.theme.mode);
+    const theme = useSelector(getActualTheme);
 
     return (
         <div>

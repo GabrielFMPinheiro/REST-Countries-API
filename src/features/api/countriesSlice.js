@@ -48,6 +48,6 @@ export const countriesSlice = createSlice({
 
 export const { selectCountry } = countriesSlice.actions;
 
-export const selectAllCountries = (state) => state.countries.payload;
+export const getAllCountries = (state) => state.countries.payload;
 
 export default countriesSlice.reducer;
