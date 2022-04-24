@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
     ImgWrapper,
@@ -27,7 +28,6 @@ const filterVariants = {
 };
 
 function Card(props) {
-    // eslint-disable-next-line react/prop-types
     const { name, flag, population, region, capital } = props;
 
     return (
@@ -64,5 +64,17 @@ function Card(props) {
         </Link>
     );
 }
+
+Card.propTypes = {
+    name: PropTypes.string.isRequired,
+    flag: PropTypes.string.isRequired,
+    population: PropTypes.string.isRequired,
+    region: PropTypes.string.isRequired,
+    capital: PropTypes.string,
+};
+
+Card.defaultProps = {
+    capital: '',
+};
 
 export default Card;

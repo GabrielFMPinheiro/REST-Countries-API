@@ -8,6 +8,7 @@ import GlobalStyle from '../../styles/global';
 import { dark, light } from '../../styles/theme';
 
 import { getActualTheme } from '../../features/theme/themeSlice';
+import { Header } from '../../components';
 
 function Layout() {
     const theme = useSelector(getActualTheme);
@@ -16,6 +17,7 @@ function Layout() {
         <div>
             <ThemeProvider theme={theme === 'light' ? light : dark}>
                 <GlobalStyle />
+                <Header />
                 <Outlet />
             </ThemeProvider>
         </div>
