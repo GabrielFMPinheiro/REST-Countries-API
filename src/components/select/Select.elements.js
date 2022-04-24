@@ -67,6 +67,7 @@ export const WrapperOptions = styled.div`
     flex-direction: column;
     gap: 0.5rem;
     position: absolute;
+    z-index: 1;
     top: 3.25rem;
 `;
 

@@ -56,5 +56,6 @@ export const { selectCountry, selectRegion, findCountryName } = countriesSlice.a
 export const getAllCountries = (state) => state.countries.payload;
 export const getRegion = (state) => state.countries.region;
 export const getCountryName = (state) => state.countries.name;
+export const getStatusApi = (state) => state.countries.status;
 
 export default countriesSlice.reducer;

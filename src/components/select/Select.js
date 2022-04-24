@@ -16,6 +16,22 @@ import {
     ArrowUp,
 } from './Select.elements';
 
+const filterVariants = {
+    hidden: {
+        opacity: 0,
+        x: '200vw',
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            type: 'spring',
+            stiffness: 50,
+            delay: 0.1,
+        },
+    },
+};
+
 function Select() {
     const dispatch = useDispatch();
     const regionSelected = useSelector(getRegion);
@@ -37,7 +53,13 @@ function Select() {
 
     return (
         <Wrapper>
-            <WrapperSelect onClick={() => setToggle(!toggle)} whileTap={{ scale: 0.9 }}>
+            <WrapperSelect
+                onClick={() => setToggle(!toggle)}
+                whileTap={{ scale: 0.9 }}
+                variants={filterVariants}
+                initial="hidden"
+                animate="visible"
+            >
                 {regionSelected && <Close onClick={() => dispatch(selectRegion(''))} />}
                 <SelectContainer ref={selectEl}>Filter By Region</SelectContainer>
 

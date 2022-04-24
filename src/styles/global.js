@@ -18,4 +18,8 @@ export default createGlobalStyle`
         background: none;
         cursor: pointer;
     }
+
+    a {
+        text-decoration: none
+    }
 `;
