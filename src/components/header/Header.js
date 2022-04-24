@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { changeTheme, getActualTheme } from '../../features/theme/themeSlice';
+import { changeTheme, getActualTheme } from '../../redux/features/theme/themeSlice';
 
 import {
     WrapperHeader,
@@ -52,11 +52,7 @@ function Header() {
     return (
         <WrapperHeader>
             <WrapperContent>
-                <Title
-                    variants={titleVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
+                <Title variants={titleVariants} initial="hidden" animate="visible">
                     Where in the world?
                 </Title>
 

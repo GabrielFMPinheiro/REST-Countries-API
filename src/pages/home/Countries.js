@@ -7,7 +7,7 @@ import {
     getCountryName,
     getRegion,
     getStatusApi,
-} from '../../features/countries/countriesSlice';
+} from '../../redux/features/countries/countriesSlice';
 import { Wrapper, WrapperFilters, WrapperContent, WrapperCards } from './Countries.elements';
 
 function Home() {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getRegion, selectRegion } from '../../features/countries/countriesSlice';
+import { getRegion, selectRegion } from '../../redux/features/countries/countriesSlice';
 
 import { REGIONS } from '../../utils/constants';
 

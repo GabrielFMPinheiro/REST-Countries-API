@@ -42,6 +42,6 @@ export const Description = styled.span`
 `;
 
 export const Information = styled.span`
-    font-weight: 500;
+    font-weight: 300;
     margin-left: 0.2rem;
 `;

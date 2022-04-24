@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { findCountryName, getCountryName } from '../../features/countries/countriesSlice';
+import { findCountryName, getCountryName } from '../../redux/features/countries/countriesSlice';
 
 import { Input, Wrapper, SearchIcon } from './Search.elements';
 

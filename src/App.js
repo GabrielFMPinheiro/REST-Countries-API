@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { getStatusApi } from './features/countries/countriesSlice';
+import { getStatusApi } from './redux/features/countries/countriesSlice';
 
 import { Countries, CountryDetails, Layout } from './pages';
 

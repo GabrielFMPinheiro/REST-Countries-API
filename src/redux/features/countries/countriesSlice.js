@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-import countriesApi from '../../services/api';
+import countriesApi from '../../../services/api';
 
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
     try {
