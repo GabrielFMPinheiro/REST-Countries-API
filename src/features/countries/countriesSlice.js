@@ -3,17 +3,14 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 import countriesApi from '../../services/api';
 
-export const fetchCountries = createAsyncThunk(
-    'countries/fetchCountries',
-    async () => {
-        try {
-            const response = await countriesApi.get('/all');
-            return response.data;
-        } catch (err) {
-            return err;
-        }
-    },
-);
+export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
+    try {
+        const response = await countriesApi.get('/all');
+        return response.data;
+    } catch (err) {
+        return err;
+    }
+});
 
 const initialState = {
     payload: [],
@@ -21,6 +18,7 @@ const initialState = {
     error: null,
     countryChosen: '',
     region: '',
+    name: '',
 };
 
 export const countriesSlice = createSlice({
@@ -32,6 +30,9 @@ export const countriesSlice = createSlice({
         },
         selectRegion: (state, action) => {
             state.region = action.payload;
+        },
+        findCountryName: (state, action) => {
+            state.name = action.payload;
         },
     },
     extraReducers: (builder) => {
@@ -50,9 +51,10 @@ export const countriesSlice = createSlice({
     },
 });
 
-export const { selectCountry, selectRegion } = countriesSlice.actions;
+export const { selectCountry, selectRegion, findCountryName } = countriesSlice.actions;
 
 export const getAllCountries = (state) => state.countries.payload;
 export const getRegion = (state) => state.countries.region;
+export const getCountryName = (state) => state.countries.name;
 
 export default countriesSlice.reducer;

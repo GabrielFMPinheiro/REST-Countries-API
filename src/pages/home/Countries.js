@@ -1,14 +1,18 @@
 import React from 'react';
 
-import { Header } from '../../components';
-import SelectRegion from '../../components/select/Select';
+import { Header, Search, Select } from '../../components';
+import { Wrapper, WrapperFilters } from './Countries.elements';
 
 function Home() {
     return (
-        <div>
+        <Wrapper>
             <Header />
-            <SelectRegion />
-        </div>
+
+            <WrapperFilters>
+                <Search />
+                <Select />
+            </WrapperFilters>
+        </Wrapper>
     );
 }
 

@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import {
-    getRegion,
-    selectRegion,
-} from '../../features/countries/countriesSlice';
+import { getRegion, selectRegion } from '../../features/countries/countriesSlice';
 
 import { REGIONS } from '../../utils/constants';
 
@@ -40,16 +37,9 @@ function Select() {
 
     return (
         <Wrapper>
-            <WrapperSelect
-                onClick={() => setToggle(!toggle)}
-                whileTap={{ scale: 0.9 }}
-            >
-                {regionSelected && (
-                    <Close onClick={() => dispatch(selectRegion(''))} />
-                )}
-                <SelectContainer ref={selectEl}>
-                    Filter By Region
-                </SelectContainer>
+            <WrapperSelect onClick={() => setToggle(!toggle)} whileTap={{ scale: 0.9 }}>
+                {regionSelected && <Close onClick={() => dispatch(selectRegion(''))} />}
+                <SelectContainer ref={selectEl}>Filter By Region</SelectContainer>
 
                 {toggle ? <ArrowUp /> : <ArrowDown />}
             </WrapperSelect>
