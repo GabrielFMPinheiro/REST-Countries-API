@@ -64,8 +64,6 @@ export const Container = styled.div`
     color: ${({ theme }) => theme['text-colors'].secundary};
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem 0;
     position: absolute;
     top: 3.25rem;
     width: 100%;
@@ -76,6 +74,14 @@ export const Option = styled(motion.p)`
     cursor: pointer;
     font-size: 0.75rem;
     font-weight: 600;
-    padding-left: 1.5rem;
+    padding: 0 0 0.5rem 1.5rem;
     width: 100%;
+
+    &:first-child {
+        padding-top: 1rem;
+    }
+
+    &:last-child {
+        padding-bottom: 1rem;
+    }
 `;

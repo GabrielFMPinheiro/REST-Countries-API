@@ -1,8 +1,9 @@
 // Libs
 import { createSlice } from '@reduxjs/toolkit';
+import { saveLocalStorage, getLocalStorage } from '../../../utils/support';
 
 const initialState = {
-    mode: 'light',
+    mode: getLocalStorage('theme', 'light'),
 };
 
 const themeSlice = createSlice({
@@ -11,6 +12,7 @@ const themeSlice = createSlice({
     reducers: {
         changeTheme: (state) => {
             state.mode = state.mode === 'light' ? 'dark' : 'light';
+            saveLocalStorage('theme', state.mode);
         },
     },
 });

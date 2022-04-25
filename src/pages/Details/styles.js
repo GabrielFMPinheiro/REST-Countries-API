@@ -28,9 +28,9 @@ export const Image = styled.img`
     height: 14.3125rem;
     width: 100%;
 
-    @media (min-width: ${screens.mobile}) {
+    @media (min-width: ${screens.tablet}) {
         width: 50%;
-        height: 12rem;
+        height: 18rem;
     }
 
     @media (min-width: ${screens.laptop}) {
