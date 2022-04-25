@@ -14,7 +14,7 @@ function Card(props) {
     const { name, flag, population, region, capital } = props;
 
     return (
-        <Link to={`${name}`}>
+        <Link to={`${name.replace(/ /g, '%20')}`}>
             <Wrapper
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ scale: 1.1 }}
