@@ -128,7 +128,8 @@ function CountryDetails() {
                                                 whileHover={{ scale: 1.1, originX: 0 }}
                                                 whileTap={{ scale: 0.9 }}
                                                 key={border}
-                                                onClick={() => navigate(`/${actualBorder.name}`)}
+                                                // prettier-ignore
+                                                onClick={() => navigate(`/${actualBorder.name.replace(/ /g, '%20')}`)}
                                             >
                                                 {actualBorder.name}
                                             </Border>
