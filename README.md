@@ -28,15 +28,15 @@ Users should be able to:
 
 ### Screenshot
 
+![](./design/rest-countries-desktop-home.png)
 ![](./design/rest-countries-desktop-details.png)
-![](./design/rest-countries-desktop-details.png)
-![](./design/rest-countries-mobile-details.png)
+![](./design/rest-countries-mobile-home.png)
 ![](./design/rest-countries-mobile-details.png)
 
 ### Links
 
 -   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [https://rest-countries-pi.vercel.app/](https://rest-countries-pi.vercel.app/)
+-   Live Site URL: [https://rest-countries-gabrielfmpinheiro.vercel.app](https://rest-countries-gabrielfmpinheiro.vercel.app)
 
 ## My process
 
