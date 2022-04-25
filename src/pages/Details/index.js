@@ -45,7 +45,6 @@ function CountryDetails() {
         currencies,
         languages,
         borders,
-        alpha3Code,
     } = countrySelected;
 
     return (
@@ -59,7 +58,7 @@ function CountryDetails() {
                         initial="hidden"
                         animate="visible"
                     >
-                        <Image src={flags.png} alt={alpha3Code} />
+                        <Image src={flags.png.replace(/ /g, '%20')} alt={name} />
 
                         <InformationContainer>
                             <Name>{name}</Name>
