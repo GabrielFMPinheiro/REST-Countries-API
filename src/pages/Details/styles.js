@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import screens from '../../styles/breakpoints/screens';
 
 export const DetailsContainer = styled(motion.section)`
-    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
