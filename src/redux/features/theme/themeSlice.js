@@ -1,4 +1,4 @@
-/* eslint-disable no-param-reassign */
+// Libs
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -17,6 +17,7 @@ const themeSlice = createSlice({
 
 export const { changeTheme } = themeSlice.actions;
 
+// aux functions
 export const getActualTheme = (state) => state.theme.mode;
 
 export default themeSlice.reducer;

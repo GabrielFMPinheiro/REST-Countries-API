@@ -19,7 +19,23 @@ export default createGlobalStyle`
         cursor: pointer;
     }
 
+    button {
+        color: ${({ theme }) => theme['text-colors'].secundary};
+    }
+
     a {
         text-decoration: none
+    }
+
+    input {
+        color: ${({ theme }) => theme['text-colors'].primary};
+
+        &::placeholder {
+            color: ${({ theme }) => theme['text-colors'].primary};
+        }
+    }
+
+    image {
+        object-fit: cover;
     }
 `;

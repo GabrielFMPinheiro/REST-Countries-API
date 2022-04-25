@@ -1,4 +1,4 @@
-export { default as Header } from './header/Header';
-export { default as Search } from './search/Search';
-export { default as Select } from './select/Select';
-export { default as Card } from './card/Card';
+export { default as Header } from './Header';
+export { default as Search } from './Search';
+export { default as Select } from './Select';
+export { default as Card } from './Card';

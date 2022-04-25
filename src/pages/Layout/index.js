@@ -1,13 +1,19 @@
+// Libs
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+// Components
 import { Outlet } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../../styles/global';
 
+// Themes styles
 import { dark, light } from '../../styles/theme';
 
-import { getActualTheme } from '../../features/theme/themeSlice';
+// Redux aux functions
+import { getActualTheme } from '../../redux/features/theme/themeSlice';
+
+// Components
 import { Header } from '../../components';
 
 function Layout() {

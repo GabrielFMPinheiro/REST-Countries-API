@@ -1,81 +1,81 @@
+// Libs
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+// Icons
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import { IoClose } from 'react-icons/io5';
 
+// Media Queries
 import screens from '../../styles/breakpoints/screens';
 
-export const Wrapper = styled.div`
-    width: 12.5rem;
+export const Wrapper = styled(motion.div)`
     display: flex;
     flex-direction: column;
-    position: relative;
-`;
-
-export const WrapperSelect = styled(motion.div)`
-    padding: 0.875rem 1.25rem;
-    background-color: ${({ theme }) => theme.background.secundary};
-    border-radius: 0.3125rem;
-    width: 100%;
-    box-shadow: 0 0.125rem 0.5625rem rgba(0, 0, 0, 0.0532439);
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    justify-content: space-between;
-    cursor: pointer;
-`;
-
-export const SelectContainer = styled.div`
-    font-size: 0.75rem;
+    width: 12.5rem;
     color: ${({ theme }) => theme['text-colors'].secundary};
+    background-color: ${({ theme }) => theme.background.secundary};
+    z-index: 999;
+`;
+
+export const Filter = styled.div`
+    align-items: center;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.125rem 0.5625rem rgba(0, 0, 0, 0.0532439);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0.875rem 1.25rem;
     width: 100%;
+`;
+
+export const Name = styled.span`
+    font-size: 0.75rem;
     font-weight: 600;
+    width: 100%;
 
     @media (min-width: ${screens.tablet}) {
         font-size: 0.875rem;
     }
 `;
 
-export const ArrowDown = styled(MdKeyboardArrowDown)`
-    color: ${({ theme }) => theme['text-colors'].secundary};
-    width: 1rem;
+export const ArrowDownIcon = styled(MdKeyboardArrowDown)`
     height: 1rem;
+    width: 1rem;
 `;
 
-export const ArrowUp = styled(MdKeyboardArrowUp)`
-    color: ${({ theme }) => theme['text-colors'].secundary};
-    width: 1rem;
+export const ArrowUpIcon = styled(MdKeyboardArrowUp)`
     height: 1rem;
+    width: 1rem;
 `;
 
-export const Close = styled(IoClose)`
+export const CloseIcon = styled(IoClose)`
     color: #ab0003;
-    width: 1.25rem;
     height: 1.25rem;
     margin-right: 0.2rem;
-    z-index: 1;
+    width: 1.25rem;
 `;
 
-export const WrapperOptions = styled.div`
-    padding: 1rem 0;
+export const Container = styled.div`
     background-color: ${({ theme }) => theme.background.secundary};
-    width: 100%;
-    box-shadow: 0 0.125rem 0.5625rem rgba(0, 0, 0, 0.0532439);
     border-radius: 0.3125rem;
+    box-shadow: 0 0.125rem 0.5625rem rgba(0, 0, 0, 0.0532439);
+    color: ${({ theme }) => theme['text-colors'].secundary};
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding: 1rem 0;
     position: absolute;
-    z-index: 1;
     top: 3.25rem;
+    width: 100%;
 `;
 
 export const Option = styled(motion.p)`
     color: ${({ theme }) => theme['text-colors'].secundary};
-    font-weight: 600;
+    cursor: pointer;
     font-size: 0.75rem;
+    font-weight: 600;
     padding-left: 1.5rem;
     width: 100%;
-    cursor: pointer;
 `;

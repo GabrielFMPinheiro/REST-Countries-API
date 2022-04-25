@@ -1,25 +1,15 @@
+// Libs
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+// Redux aux functions
 import { findCountryName, getCountryName } from '../../redux/features/countries/countriesSlice';
 
-import { Input, Wrapper, SearchIcon } from './Search.elements';
+// Components
+import { Input, Wrapper, SearchIcon } from './styles';
 
-const filterVariants = {
-    hidden: {
-        opacity: 0,
-        x: '-100vw',
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            type: 'spring',
-            stiffness: 50,
-            delay: 0.1,
-        },
-    },
-};
+// Framer motion
+import fade from '../../styles/motion/variants/fade';
 
 function Search() {
     const dispatch = useDispatch();
@@ -28,14 +18,14 @@ function Search() {
     return (
         <Wrapper
             whileTap={{ scale: 0.9 }}
-            variants={filterVariants}
+            variants={fade.mode.rightLeft}
             initial="hidden"
             animate="visible"
         >
             <SearchIcon />
             <Input
                 placeholder="Search for a country…"
-                onChange={({ target }) => dispatch(findCountryName(target.value))}
+                onChange={(e) => dispatch(findCountryName(e.target.value))}
                 value={country}
             />
         </Wrapper>

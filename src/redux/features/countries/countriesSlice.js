@@ -1,8 +1,10 @@
-/* eslint-disable no-param-reassign */
+// Libs
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+// Api
 import countriesApi from '../../../services/api';
 
+// Request
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
     try {
         const response = await countriesApi.get('/all');
@@ -16,7 +18,6 @@ const initialState = {
     payload: [],
     status: 'idle',
     error: null,
-    countryChosen: '',
     region: '',
     name: '',
 };
@@ -53,6 +54,7 @@ export const countriesSlice = createSlice({
 
 export const { selectCountry, selectRegion, findCountryName } = countriesSlice.actions;
 
+// aux functions
 export const getAllCountries = (state) => state.countries.payload;
 export const getRegion = (state) => state.countries.region;
 export const getCountryName = (state) => state.countries.name;
