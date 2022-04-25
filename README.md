@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
+-   Solution URL: [https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-HyPOdKXB9](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-HyPOdKXB9)
 -   Live Site URL: [https://rest-countries-gabrielfmpinheiro.vercel.app](https://rest-countries-gabrielfmpinheiro.vercel.app)
 
 ## My process

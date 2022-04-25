@@ -36,7 +36,7 @@ export const Container = styled.div`
     width: 100%;
 `;
 
-export const Title = styled(motion.h2)`
+export const Title = styled(motion.h1)`
     font-size: 0.875rem;
     font-weight: bold;
 
