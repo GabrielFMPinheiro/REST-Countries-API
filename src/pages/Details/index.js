@@ -45,6 +45,7 @@ function CountryDetails() {
         currencies,
         languages,
         borders,
+        alpha3Code,
     } = countrySelected;
 
     return (
@@ -58,7 +59,7 @@ function CountryDetails() {
                         initial="hidden"
                         animate="visible"
                     >
-                        <Image src={flags.png} alt={name} />
+                        <Image src={flags.png} alt={alpha3Code} />
 
                         <InformationContainer>
                             <Name>{name}</Name>
@@ -120,7 +121,7 @@ function CountryDetails() {
                                     <Title>Border Countries:</Title>
                                     {borders.map((border) => {
                                         const actualBorder = countries.find(
-                                            ({ alpha3Code }) => alpha3Code === border,
+                                            (country) => country.alpha3Code === border,
                                         );
 
                                         return (

@@ -11,7 +11,7 @@ import { Specification, Content } from '../../styles/global/styledComponents';
 import fade from '../../styles/motion/variants/fade';
 
 function Card(props) {
-    const { name, flag, population, region, capital } = props;
+    const { name, flag, population, region, capital, alpha3Code } = props;
 
     return (
         <Link to={`${name}`}>
@@ -22,7 +22,7 @@ function Card(props) {
                 initial="hidden"
                 animate="visible"
             >
-                <Image src={flag} alt={name} />
+                <Image src={flag} alt={alpha3Code} />
 
                 <DataWrapper>
                     <Name>{name}</Name>
@@ -52,6 +52,7 @@ Card.propTypes = {
     flag: PropTypes.string.isRequired,
     population: PropTypes.string.isRequired,
     region: PropTypes.string.isRequired,
+    alpha3Code: PropTypes.string.isRequired,
     capital: PropTypes.string,
 };
 
