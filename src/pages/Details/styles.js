@@ -9,6 +9,7 @@ export const DetailsContainer = styled(motion.section)`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items:center;
     width: 100%;
 
     @media (min-width: ${screens.tablet}) {
@@ -26,6 +27,10 @@ export const Image = styled.img`
     border-radius: 0.36rem;
     height: 14.3125rem;
     width: 100%;
+
+    @media (min-width: ${screens.mobile}) {
+        width: 22rem;
+    }
 
     @media (min-width: ${screens.tablet}) {
         width: 50%;
